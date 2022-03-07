@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+<!--Header-->
+<h1>String Manipulation</h1>
+
+ <!--id-->
+<div id="app">
+
+<!--input-->
+<input id="inputfield" type="text" placeholder="write a word" v-model="word">
+
+<!--Button-->
+<button id="buttonShow" v-on:click="show" type="button">Show</button>
+
+<!--output-->
+<div id="outputfield"> {{result}}</div>
+
+
+<!-- first unordered list-->
+<ul v-if="words.length > 0">
+    <li v-for="word in words">
+        {{word}}
+    </li>
+</ul>
+
+<!--tabel der udskriver "hello" på forskellige former-->
+<table class="tabel" width="50%">
+    <tbody>
+        <tr class="active" v-for="word in words">
+            <td>{{word}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<script src="index.js"></script>  
+</body>
+</html>
+
+
+
